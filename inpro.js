@@ -13,11 +13,11 @@ let StudentPrototype={
   console.log(dev);
   
   //Question no.2
-  let dev1=Object.create(ravi);
-  console.log(ravi.__proto__);//here the prototype of ravi is dev1
-  console.log(ravi.__proto__.__proto__);//here it will print prototype of jar which is studentprototype
-  console.log(ravi.__proto__.__proto__.__proto__);//here it prints prototype of PersonPrototype which is object prototype
-  console.log(ravi.__proto__.__proto__.__proto__.__proto__);//here it prints null 
+  let dev1=Object.create(dev);
+  console.log(dev1.__proto__);//here the prototype of dev is studentprototype which is an object
+  console.log(dev1.__proto__.__proto__);//here it will print prototype of dev1 which is  object
+  console.log(dev1.__proto__.__proto__.__proto__);//prototype of object constructor
+  console.log(dev1.__proto__.__proto__.__proto__.__proto__);//null
   
   //Question no.3
   let arr1={
@@ -31,8 +31,8 @@ let StudentPrototype={
   console.log(arr1.sum(arr12));
   
   //Question no. 4
-  function funDetails(){
-    const keys = Object.keys(dev);
+  function Details(){
+    const keys = Object.keys(dev1);
     console.log(keys);
   }
-  funDetails();
+  Details();
